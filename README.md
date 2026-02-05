@@ -6,31 +6,29 @@ Supports couples and people dating multiple people.
 
 ## Install
 
-### Option 1: Plugin marketplace (recommended)
-
-In Claude Code, run:
-
-```
-/plugin marketplace add tonyyont/date-planner
-/plugin install date-planner@tonyyont-date-planner
-```
-
-### Option 2: git clone
-
 ```bash
 git clone https://github.com/tonyyont/date-planner.git
 cd date-planner
 ```
 
-Then run `/date-plan` in Claude Code to start setup.
+Open the folder in Claude Code (CLI or desktop app) and say anything — it'll start setup automatically.
+
+<details>
+<summary>Alternative: Claude Code plugin marketplace (CLI only)</summary>
+
+If you use the Claude Code CLI and want the skills available globally:
+
+```
+/plugin marketplace add https://github.com/tonyyont/date-planner.git
+/plugin install date-planner@tonyyont-date-planner
+```
+
+Note: Use the full HTTPS URL, not the `owner/repo` shorthand ([known SSH issue](https://github.com/anthropics/claude-code/issues/9719)).
+</details>
 
 ## Getting Started
 
-```
-/date-plan
-```
-
-First run walks you through setup (~2 min):
+Open the project in Claude Code and send any message. First run walks you through setup (~2 min):
 - Your name and who you're dating
 - Your city
 - Food preferences, date style, budget
@@ -42,10 +40,10 @@ It then auto-discovers popular venues in your city.
 
 | Skill | What it does |
 |-------|-------------|
-| `/date-planner:date-plan` | Plan a date with concrete options |
-| `/date-planner:events` | Find events in your city |
-| `/date-planner:venue-watch` | Track venues and artists |
-| `/date-planner:find-class` | Find classes and experiences |
+| `/date-plan` | Plan a date with concrete options |
+| `/events` | Find events in your city |
+| `/venue-watch` | Track venues and artists |
+| `/find-class` | Find classes and experiences |
 
 ## How it works
 
