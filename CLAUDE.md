@@ -2,6 +2,19 @@
 
 A Claude Code skill for planning dates. Works in any city. Finds real events, restaurants, and activities personalized to your relationship(s).
 
+## First Message Behavior
+
+When a user opens this project for the first time (or sends any message), check `data/preferences.json`:
+
+- If `metadata.setup_complete` is **false**: Welcome them and immediately start the `/date-plan setup` onboarding flow. Don't wait for them to ask.
+- If `metadata.setup_complete` is **true**: Greet them by name (from preferences) and remind them what skills are available:
+  > Hey [name]! What are we planning?
+  >
+  > - `/date-plan` — plan a date
+  > - `/events` — what's happening in [city]
+  > - `/venue-watch` — check your watched venues
+  > - `/find-class` — find a class or experience
+
 ## Skills
 
 ### `/date-plan` — Main Date Planner
