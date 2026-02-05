@@ -44,11 +44,11 @@ Convert timeframe to concrete dates:
 
 **Music:**
 - WebSearch: "concerts {city} this week", "live music {city} this weekend"
-- If Ticketmaster API available: `python3 scripts/fetch_events.py --city "{city}" --category music --days {N} --format json`
+- If Ticketmaster API available: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --category music --days {N} --format json`
 
 **Theater:**
 - WebSearch: "theater shows {city} now playing", "broadway {city} current"
-- If Ticketmaster API available: `python3 scripts/fetch_events.py --city "{city}" --category theatre --days {N} --format json`
+- If Ticketmaster API available: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --category theatre --days {N} --format json`
 
 **Comedy:**
 - WebSearch: "comedy shows {city} this week", "stand up comedy {city} this weekend"
@@ -110,12 +110,12 @@ If a category has no results:
 ### Artist Search
 If user asks about a specific artist (e.g., `/events "Radiohead"`):
 - WebSearch: "[artist name] concert {city} 2026"
-- If Ticketmaster available: `python3 scripts/fetch_events.py --city "{city}" --artist "name" --format json`
+- If Ticketmaster available: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --artist "name" --format json`
 
 ### Venue-Specific
 If user asks about a specific venue (e.g., `/events metro`):
 - Find venue in `data/venues.json`
-- If found with Ticketmaster ID: `python3 scripts/fetch_events.py --venue {slug} --days 30 --format json`
+- If found with Ticketmaster ID: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --venue {slug} --days 30 --format json`
 - If no Ticketmaster ID: WebSearch "[venue name] upcoming shows schedule"
 
 ## Error Handling

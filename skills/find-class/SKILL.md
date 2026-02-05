@@ -46,7 +46,7 @@ If any `things_to_try` items match the category, add a reminder:
 
 Run the query generator:
 ```bash
-python3 scripts/fetch_classes.py --city "{city}" --category {category} --format json
+python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_classes.py --city "{city}" --category {category} --format json
 ```
 
 This outputs:

@@ -1,0 +1,24 @@
+{
+  "name": "tonyyont-date-planner",
+  "owner": {
+    "name": "Tony Yont"
+  },
+  "metadata": {
+    "description": "Date planning skills for Claude Code — events, venues, classes",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "date-planner",
+      "description": "Plan dates, find events, track venues, discover classes — personalized to your city and relationship(s)",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/date-plan",
+        "./skills/events",
+        "./skills/venue-watch",
+        "./skills/find-class"
+      ]
+    }
+  ]
+}

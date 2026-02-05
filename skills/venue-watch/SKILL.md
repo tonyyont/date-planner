@@ -36,7 +36,7 @@ Read `data/preferences.json`. If `metadata.setup_complete` is false, say:
 
 4. **For each watched venue with a ticketmaster_venue_id** (if Ticketmaster API available):
    ```bash
-   python3 scripts/fetch_events.py --venue <slug> --days 30 --format json
+   python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --venue <slug> --days 30 --format json
    ```
 
 5. **For watched venues WITHOUT Ticketmaster ID:**
@@ -44,7 +44,7 @@ Read `data/preferences.json`. If `metadata.setup_complete` is false, say:
 
 6. **For watched artists:**
    - WebSearch: "[artist name] concert [city] 2026"
-   - If Ticketmaster available: `python3 scripts/fetch_events.py --city "{city}" --artist "<name>" --format json`
+   - If Ticketmaster available: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --artist "<name>" --format json`
 
 7. Display results grouped by venue:
 
@@ -92,7 +92,7 @@ This is the key flow that builds the venue database organically:
 5. Add slug to `data/watchlist.json` `watched_venues`
 6. If Ticketmaster API available, search for venue ID:
    ```bash
-   python3 scripts/fetch_venues.py --venue "[name]"
+   python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_venues.py --venue "[name]"
    ```
    Update the entry if found.
 7. Confirm: "Added **[Venue Name]** to your watchlist! ([category], [neighborhood])"
@@ -103,7 +103,7 @@ This is the key flow that builds the venue database organically:
 1. Add to `data/watchlist.json` `watched_artists` array
 2. Immediately search:
    - WebSearch: "[artist name] concert [city] 2026 tour dates"
-   - If Ticketmaster available: `python3 scripts/fetch_events.py --city "{city}" --artist "<name>" --format json`
+   - If Ticketmaster available: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --artist "<name>" --format json`
 3. Show results or: "No upcoming dates for [artist] in [city]. I'll flag them when they're announced."
 4. Git commit
 

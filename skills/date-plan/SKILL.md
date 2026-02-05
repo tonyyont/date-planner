@@ -73,19 +73,19 @@ Read city from `data/preferences.json`. Use `{city}` in all searches below.
 **Data Source Priority:**
 1. **WebSearch** (always available, no setup required)
 2. **Ticketmaster API** (optional — only if `TICKETMASTER_API_KEY` in `~/.config/datekit/.env`)
-   - Run: `python3 scripts/fetch_events.py --city "{city}" --category {cat} --days {N}`
+   - Run: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --category {cat} --days {N}`
 3. **Google Places API** (optional — only if `GOOGLE_PLACES_API_KEY` in `~/.config/datekit/.env`)
 
 **By category:**
 
 **Adventure:**
 - WebSearch: "concerts {city} this weekend", "outdoor activities {city}", "sports events {city}"
-- If Ticketmaster available: `python3 scripts/fetch_events.py --city "{city}" --category music --days {N}`
+- If Ticketmaster available: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_events.py --city "{city}" --category music --days {N}`
 - Check `things_to_try` list from preferences
 
 **Creative:**
 - WebSearch: "couples classes {city}", "pottery class {city}", "cooking class {city}"
-- Run: `python3 scripts/fetch_classes.py --city "{city}" --category {type}`
+- Run: `python3 ${CLAUDE_PLUGIN_ROOT}/scripts/fetch_classes.py --city "{city}" --category {type}`
 - Check `things_to_try` list
 
 **Explore:**

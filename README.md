@@ -6,16 +6,19 @@ Supports couples and people dating multiple people.
 
 ## Install
 
-### Option 1: skillfish (recommended)
+### Option 1: Plugin marketplace (recommended)
 
-```bash
-npx skillfish add tonysheng/date-planner
+In Claude Code, run:
+
+```
+/plugin marketplace add tonyyont/date-planner
+/plugin install date-planner@tonyyont-date-planner
 ```
 
 ### Option 2: git clone
 
 ```bash
-git clone https://github.com/tonysheng/date-planner.git
+git clone https://github.com/tonyyont/date-planner.git
 cd date-planner
 ```
 
@@ -39,10 +42,10 @@ It then auto-discovers popular venues in your city.
 
 | Skill | What it does |
 |-------|-------------|
-| `/date-plan` | Plan a date with concrete options |
-| `/events` | Find events in your city |
-| `/venue-watch` | Track venues and artists |
-| `/find-class` | Find classes and experiences |
+| `/date-planner:date-plan` | Plan a date with concrete options |
+| `/date-planner:events` | Find events in your city |
+| `/date-planner:venue-watch` | Track venues and artists |
+| `/date-planner:find-class` | Find classes and experiences |
 
 ## How it works
 
